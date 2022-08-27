@@ -1,4 +1,4 @@
-const userRepository = require("../../../src/frameworks/repositories/inMemory/userRepository");
+const userRepository = require("../../../src/frameworks/repositories/inMemory/user.repository");
 const {User, 
     constants : {
         userConstants : {genders}
