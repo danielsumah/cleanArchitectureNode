@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "start": "node index.js"
+    "start": "nodemon index.js"
   },
   "author": "Daniel Sumah",
   "license": "ISC",
@@ -16,6 +16,7 @@
     "uuid": "^8.3.2"
   },
   "devDependencies": {
-    "chance": "^1.1.8"
+    "chance": "^1.1.8",
+    "nodemon": "^2.0.19"
   }
 }

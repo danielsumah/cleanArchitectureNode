@@ -13,11 +13,11 @@ module.exports = dependencies => {
         try {
             const { body = {}} = req;
 
-            const {firstName, lastName, gender, meta} = body;
+            const {id,firstName, lastName, gender, meta} = body;
 
-            const deleteUser = updateUserUseCase(dependencies);
+            const updateUser = updateUserUseCase(dependencies);
 
-            const response = await deleteUser.execute(user = {firstName, lastName, gender, meta})
+            const response = await updateUser.execute({user : {id,firstName, lastName, gender, meta}})
             
             res.json(new Response({status : true, content: response}));
 

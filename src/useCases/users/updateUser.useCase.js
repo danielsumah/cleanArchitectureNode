@@ -5,7 +5,7 @@ module.exports = dependencies => {
         throw new Error('A user repository must exist in the dependendies');
     };
 
-    const execute = (user = {}) => {
+    const execute = ({user = {}}) => {
         return userRepository.update(user);
     }
 
