@@ -4,7 +4,7 @@ module.exports = dependencies => {
         throw new Error('Order repository must exist in dependencies');
     }
 
-    const execute = ({order}) => {
+    const execute = (order) => {
         return orderRepository.delete(order)
     }
 
