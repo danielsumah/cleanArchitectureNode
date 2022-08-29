@@ -7,6 +7,8 @@ const API_URL = process.env.API_URL || '/api/v1';
 
 const dependencies= require('./config/dependencies');
 
+const ErrorHandler = require('./frameworks/express/ErrorHandler')
+
 module.exports = {
     start: () => {
         //Middlewares
@@ -19,6 +21,7 @@ module.exports = {
 
 
         //Common error handlers
+        app.use(ErrorHandler);
 
         app.listen(PORT, ()=>{
             console.log("Server running on port", PORT);
