@@ -6,13 +6,15 @@ module.exports = dependencies => {
     const {
         addProductController,
         getProductByIdController,
-        updatedProductController
+        updatedProductController,
+        deletedProductController
     } = productControllers(dependencies);
 
     router.route('/')
         .post(addProductController)
-        .put(updatedProductController);
-        
+        .put(updatedProductController)
+        .delete(deletedProductController);
+
     router.route('/:id')
         .get(getProductByIdController);
 
