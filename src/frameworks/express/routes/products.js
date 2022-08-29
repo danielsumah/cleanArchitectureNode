@@ -5,11 +5,14 @@ module.exports = dependencies => {
     const router = express.Router();
     const {
         addProductController,
-        getProductByIdController
+        getProductByIdController,
+        updatedProductController
     } = productControllers(dependencies);
 
     router.route('/')
-        .post(addProductController);
+        .post(addProductController)
+        .put(updatedProductController);
+        
     router.route('/:id')
         .get(getProductByIdController);
 
