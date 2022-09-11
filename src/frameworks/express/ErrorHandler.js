@@ -9,7 +9,8 @@ module.exports = (err, req, res, next) => {
         msg : err.msg || err.message || 'No message for this',
         reason : err.reason || "No reason is provided for this error",
         url : req.originalUrl,
-        ip : req.ip
+        ip : req.ip,
+        validationErrors : err.validationErrors
     });
 
     res.status(error.status);
