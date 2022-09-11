@@ -1,8 +1,7 @@
 const mongoose = require("mongoose");
-const {Schema, ObjectId} = mongoose;
+const {Schema} = mongoose;
 
 module.exports= new Schema({
-    id        : String,
     firstName : String,
     lastName  : String,
     gender    : Number,
